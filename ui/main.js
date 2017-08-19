@@ -20,8 +20,6 @@ button.onclick = function(){
 var submitButton = document.getElementById("submit_btn");
 submitButton.onclick = function(){
     var list = "";
-    var nameInput = document.getElementById("name");
-    var name = nameInput.value;
     var request = new XMLHttpRequest();
     request.onreadystatechanged = function(){
         if(request.readyState == XMLHttpRequest.DONE){
@@ -38,6 +36,8 @@ submitButton.onclick = function(){
             }
         }
     };
+    var nameInput = document.getElementById("name");
+    var name = nameInput.value;
     request.open("GET", "http://souravnayak111.imad.hasura-app.io/submit-name?name="+name, true);
     request.send(null);
 };
