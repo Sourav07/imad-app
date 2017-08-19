@@ -14,7 +14,7 @@ button.onclick = function(){
         }
     };
     request.open('GET', "http://souravnayak111.imad.hasura-app.io/counter", true);
-    request.send();
+    request.send(null);
 };
 
 var submitButton = document.getElementById("submit_btn");
@@ -38,5 +38,5 @@ submitButton.onclick = function(){
     var nameInput = document.getElementById("name");
     var name = nameInput.value;
     request.open("GET", "http://souravnayak111.imad.hasura-app.io/submit-name?name="+name, true);
-    request.send();
+    request.send(null);
 };
