@@ -90,10 +90,7 @@ var namesList = [];
 app.get('/submit-name', function(req, res){
    var name = req.query.name
    namesList.push(name);
-   var response = {
-       "namesList": namesList
-   };
-   res.send(JSON.stringify(response));
+   res.send(JSON.stringify(namesList));
 });
 
 app.get('/:articleName', function(req, res){
