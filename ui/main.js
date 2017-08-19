@@ -12,7 +12,7 @@ button.onclick = function(){
                 countElement.innerHTML = counter.toString();
             }
         }
+    };
     request.open('GET', "http://souravnayak111.imad.hasura-app.io/counter", true);
     request.send(null);
-    };
 };
