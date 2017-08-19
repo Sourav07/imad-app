@@ -26,7 +26,9 @@ submitButton.onclick = function(){
     request.onreadystatechanged = function(){
         if(request.readyState == XMLHttpRequest.DONE){
             if(request.status == 200){
-                var names = (JSON.parse(request.responseText)).namesList;
+                var names = JSON.parse(request.responseText);
+                names = names.namesList;
+                console.log(names);
                 for(var i = 0; i < names.length; i++){
                     list += "<li>"+names[i]+"</li>";
                 }
