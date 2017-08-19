@@ -17,15 +17,24 @@ button.onclick = function(){
     request.send(null);
 };
 
-var nameInput = document.getElementById("name");
-var name = nameInput.value;
 var submitButton = document.getElementById("submit_btn");
 submitButton.onclick = function(){
-    var names = ["name1","name2","name3"];
     var list = "";
-    for(var i = 0; i < names.length; i++){
-        list += "<li>"+names[i]+"</li>";
-    }
-    var listElement = document.getElementById("name_list");
-    listElement.innerHTML = list;
+    var nameInput = document.getElementById("name");
+    var name = nameInput.value;
+    var request = new XMLHttpRequest();
+    request.onreadystatechanged = function(){
+        if(request.readyState == XMLHttpRequest.DONE){
+            if(request.status == 200){
+                var names = (JSON.parse(request.responseText)).namesList;
+                for(var i = 0; i < names.length; i++){
+                    list += "<li>"+names[i]+"</li>";
+                }
+                var listElement = document.getElementById("name_list");
+                listElement.innerHTML = list;
+            }
+        }
+    };
+    request.open("GET", "http://souravnayak111.imad.hasura-app.io/submit-name/"+name, null);
+    request.send(null);
 };
