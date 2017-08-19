@@ -86,6 +86,16 @@ app.get('/counter', function(req, res){
    res.send(counter.toString());
 });
 
+var namesList = [];
+app.get('/submit-name/:name', function(req, res){
+   var name = req.params.name
+   namesList.push(name);
+   var response = {
+       "namesList": namesList
+   };
+   res.send(JSON.stringify(response));
+});
+
 app.get('/:articleName', function(req, res){
   var articleName = req.params.articleName;    
   res.send(createTemplate(articles[articleName]));
