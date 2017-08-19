@@ -37,6 +37,6 @@ submitButton.onclick = function(){
             }
         }
     };
-    request.open("GET", "http://souravnayak111.imad.hasura-app.io/submit-name?name="+name, null);
+    request.open("GET", "http://souravnayak111.imad.hasura-app.io/submit-name?name="+name, true);
     request.send(null);
 };
