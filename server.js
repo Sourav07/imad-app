@@ -21,31 +21,19 @@ var articles = {
                     </p>`
     },
     'article-two' : {
-        title : "Article One | Sourav Nayak",
-        heading : "Article One",
+        title : "Article Two | Sourav Nayak",
+        heading : "Article Two",
         date : "September 19, 2017",
         content : ` <p>
-                        This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article.
-                    </p>
-                    <p>
-                        This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article.
-                    </p>
-                    <p>
-                        This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article.
+                        This is the content of my second article. 
                     </p>`
     },
     'article-three' : {
-        title : "Article One | Sourav Nayak",
-        heading : "Article One",
+        title : "Article Three | Sourav Nayak",
+        heading : "Article Three",
         date : "September 19, 2017",
         content : ` <p>
-                        This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article.
-                    </p>
-                    <p>
-                        This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article.
-                    </p>
-                    <p>
-                        This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article. This is the content of my first article.
+                        This is the content of my third article. 
                     </p>`
     }
 };
