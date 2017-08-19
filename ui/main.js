@@ -6,6 +6,12 @@ element.innerHTML = "NewValue";
 
 //Move the image
 var imgElement = document.getElementById("madi");
+var marginLeft = 0;
 imgElement.onclick = function(){
-    imgElement.style.marginLeft = "100px";
+    var interval = setInterval(moveRight, 100);
 };
+
+function moveRight(){
+    marginLeft = marginLeft+10;
+    imgElement.style.marginLeft = marginLeft+"px";
+}
