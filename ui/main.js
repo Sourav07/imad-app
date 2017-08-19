@@ -4,7 +4,7 @@ var counter = 0;
 var button = document.getElementById("counter");
 button.onclick = function(){
     var request = new XMLHttpRequest();
-    request.onreadystatechanged = function(){
+    request.onreadystatechange = function(){
         if(request.readyState == XMLHttpRequest.DONE){
             if(request.status == 200){
                 var counter = request.responseText;
@@ -21,7 +21,7 @@ var submitButton = document.getElementById("submit_btn");
 submitButton.onclick = function(){
     var list = "";
     var request = new XMLHttpRequest();
-    request.onreadystatechanged = function(){
+    request.onreadystatechange = function(){
         if(request.readyState == XMLHttpRequest.DONE){
             if(request.status == 200){
                 console.log(JSON.stringify(request));
